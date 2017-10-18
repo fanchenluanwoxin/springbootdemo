@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<table width="100%" border="1" cellspacing="1" cellpadding="0">
+    <tr>
+        <td>作者</td>
+        <td>教程名称</td>
+        <td>地址</td>
+    </tr>
+    <!--/*@thymesVar id="list" type=""*/-->
+    <tr th:each="a : ${list}">
+        <td th:text="${a}">MD</td>
+        <td th:text="${a}">SPringBoot干货系列</td>
+        <td><a th:href="${a}" target="_blank">点我</a></td>
+    </tr>
+</table>
+</body>
+</html>
